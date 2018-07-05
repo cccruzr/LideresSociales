@@ -1,0 +1,39 @@
+.popup-banner.grid-container {
+    margin: 0;
+    padding: 1px;
+}
+
+.tooltip-banner {
+    margin: 0;
+    padding: 1px;
+}
+
+.leaflet-tooltip.leaflet-zoom-animated {
+    margin: 0;
+    padding: 2px;
+    background-color: rgba(210, 239, 255, .95);
+    border: 0;
+}
+
+.tooltip-text-small {
+    padding-right: 2px;
+    padding: 1px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 300;
+}
+
+.tooltip-counter {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 900;
+    font-style: italic;
+    color: rgba(228, 42, 55, 1);
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+}
+
+.tooltip-name {
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+

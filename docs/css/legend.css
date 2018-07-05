@@ -1,0 +1,113 @@
+.legend-wrapper-item {
+    margin-left: 20px;
+}
+
+.legend-wrapper-item > div {
+    float: left; 
+    display: inline; 
+    margin-right: 20px;
+}
+
+.legend-wrapper-item > div:nth-child(1) {
+    clear: left; 
+}
+
+.fa.fa-circle {
+    opacity: 0.6;
+}
+
+.time-slider-wrapper {
+    clear: both;
+    margin-top: 10rem;
+}
+
+.text-legend-medium {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.05rem;
+    font-weight: 300;
+}
+
+.sidebar-header {
+    font-family: 'Montserrat', sans-serif;
+    background-color: rgb(210, 239, 255);
+    color: rgba(228, 42, 55, 1);
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+    font-size: 1.75rem;
+    font-weight: 900;
+    font-style: italic;
+}
+
+.sidebar-tabs>ul>li.active{
+    color: rgba(228, 42, 55, 1);
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+    background-color: rgb(210, 239, 255);
+}
+
+.legend-title h4 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.legend-title-small h3 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.time-slider {
+    padding: 0;
+}
+
+.time-slider-slider {
+    margin-top: 10px;
+}
+
+.text-legend-medium.end-date {
+    text-align: right;
+    font-weight: 400;
+    font-size: 0.95rem;
+}
+
+.init-date {
+    font-weight: 400;
+    font-size: 0.95rem;
+}
+
+.text-info {
+    padding: 0px;
+}
+
+.legend-logo {
+    display: block;
+    margin: 20px auto;
+}
+
+.ui-widget-header {
+    background: rgb(210, 239, 255);
+}
+
+.legend-layer-image {
+    height: auto; 
+    width: auto; 
+    max-width: 15px; 
+    max-height: 15px;
+}
+
+.text-legend-small {
+    /* background-color: rgba(0, 0, 0, 0.1) */
+    font-family: 'Roboto', sans-serif;
+    font-size: .95rem;
+    font-weight: 300;
+    margin: 0px;
+}
+
+.toolLegend {
+    border-radius: 10px;
+    padding: 5px 10px 10px 10px;
+    background-color: rgba(210, 239, 255, 0.8);
+}

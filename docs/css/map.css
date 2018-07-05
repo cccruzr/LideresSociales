@@ -1,0 +1,23 @@
+.circle-lider {
+	-moz-transition: stroke-width 0.25s, stroke-opacity  0.25s;
+	-o-transition: stroke-width 0.25s, stroke-opacity  0.25s;
+	-webkit-transition: stroke-width 0.25s, stroke-opacity  0.25s;
+	transition: stroke-width 0.25s, stroke-opacity  0.25s;
+}
+
+.circle-lider:hover {
+	stroke-width: 14 !important;
+	stroke-opacity: .95;
+	opacity: .95;    		
+}
+
+.leaflet-control-layers-base {
+	font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 0.95rem;
+}
+
+.leaflet-control-attribution {
+	font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+}

@@ -1,0 +1,57 @@
+.leaflet-popup-content-wrapper {
+    background: rgba(210, 239, 255, 1);
+    color: #333;
+    box-shadow: 0 3px 14px rgba(0,0,0,0.4);
+}
+
+.leaflet-popup-tip {
+    background: rgba(210, 239, 255, 1);
+}
+
+.popup-counter-text {
+    /* height: 100px; */
+    background: url("./img/logo_g100px.png") no-repeat;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3rem;
+    font-weight: 900;
+    font-style: italic;
+    color: rgba(228, 42, 55, 1);
+    height: 100px;
+    line-height: 100px;
+    vertical-align: middle;
+    margin-right: 20px;
+    padding: 0;
+    text-align: left;
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+}
+
+.popup-banner {
+    width: 250px;
+    overflow: hidden;
+    /* height: 100px;
+    display: inline-block; */
+}
+
+.popup-img {
+    border-radius: 50%;
+}
+
+.popup-name {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.4rem;
+}
+
+.popup-text-small {
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 300;
+}
+
+.popup-resena {
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.popup-resena-text > p {
+    margin-top: 5px;
+}
