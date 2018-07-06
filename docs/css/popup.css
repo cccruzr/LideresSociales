@@ -19,7 +19,9 @@
     height: 100px;
     line-height: 100px;
     vertical-align: middle;
-    margin-right: 20px;
+    text-align: right;
+    margin-left: 10px;
+    margin-right: 30px;
     padding: 0;
     text-align: left;
     text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
@@ -32,8 +34,13 @@
     display: inline-block; */
 }
 
+.popup-banner.grid-container > div {
+    margin-right: 0px;
+}
+
 .popup-img {
     border-radius: 50%;
+    margin-left: 15px;
 }
 
 .popup-name {
@@ -54,4 +61,10 @@
 
 .popup-resena-text > p {
     margin-top: 5px;
+    margin-bottom: 2px;
+}
+
+.leaflet-popup-content {
+    margin: 3px 3px;
+    line-height: 1.4;
 }

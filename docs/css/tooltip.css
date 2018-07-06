@@ -37,3 +37,9 @@
     font-weight: 700;
 }
 
+
+.leaflet-tooltip-top:before {
+    border-top-color: rgba(210, 239, 255, .95);
+}
+
+

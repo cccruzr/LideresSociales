@@ -72,7 +72,8 @@ function drawMap(){
 
             layer.bindPopup(popupLayout, {
                     maxWidth: 300,
-                    maxHeight: 400,
+                    maxHeight: 270,
+                    closeButton: false,
                     closeOnClick: true
                 }
             );
@@ -86,7 +87,7 @@ function drawMap(){
 
             layer.bindTooltip(tooltipLayout, {
                 sticky: true,
-                offset: [10, -10],
+                offset: [0, -20],
                 direction: "top",
             });
         },
