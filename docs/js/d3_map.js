@@ -92,7 +92,7 @@ function drawMap(){
         },
     });
     
-    var myLayer = omnivore.csv('https://cdn.rawgit.com/cccruzr/LideresSociales/0f029caa5633723f6b54fab94de4ecbfd7daa511/docs/_data/data_lideres.csv', null, lideresLayer);
+    var myLayer = omnivore.csv('./_data/data_lideres.csv', null, lideresLayer);
     overlay = L.layerGroup([lideresLayer]).addTo(map);
 }
 
