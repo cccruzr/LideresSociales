@@ -82,6 +82,16 @@
     padding: 0px;
 }
 
+.legend-circle-marker {
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+
+.legend-category {
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+
 .legend-logo {
     display: block;
     margin: 20px auto;
