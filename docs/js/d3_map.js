@@ -125,7 +125,7 @@ checkbox1.change(function(event) {
     } else {
     filter[0] = false;
     }
-    setTimeout(victimsNumber, 10);
+    setTimeout(victimsNumber, 50);
     drawMap();
 });
 
@@ -136,7 +136,7 @@ checkbox2.change(function(event) {
     } else {
       filter[1] = false;
     }
-    setTimeout(victimsNumber, 10);
+    setTimeout(victimsNumber, 50);
     drawMap();
 });
 
@@ -147,7 +147,7 @@ checkbox3.change(function(event) {
     } else {
       filter[2] = false;
     }
-    setTimeout(victimsNumber, 10);
+    setTimeout(victimsNumber, 50);
     drawMap();
 });
 
@@ -158,7 +158,7 @@ checkbox4.change(function(event) {
     } else {
       filter[3] = false;
     }
-    setTimeout(victimsNumber, 10);
+    setTimeout(victimsNumber, 50);
     drawMap();
 });
 
@@ -170,7 +170,7 @@ checkbox5.change(function(event) {
       filter[4] = false;
     }
     
-    setTimeout(victimsNumber, 10);
+    setTimeout(victimsNumber, 50);
     drawMap();
 });
 
@@ -182,7 +182,7 @@ checkbox6.change(function(event) {
       filter[5] = false;
     }
     
-    setTimeout(victimsNumber, 10);
+    setTimeout(victimsNumber, 50);
     drawMap();
 });
 
@@ -194,7 +194,7 @@ checkbox7.change(function(event) {
       filter[6] = false;
     }
     
-    setTimeout(victimsNumber, 10);
+    setTimeout(victimsNumber, 50);
     drawMap();
 });
 
@@ -206,7 +206,7 @@ checkbox8.change(function(event) {
       filter[7] = false;
     }
     
-    setTimeout(victimsNumber, 10);
+    setTimeout(victimsNumber, 50);
     drawMap();
 });
 
@@ -218,7 +218,7 @@ checkbox9.change(function(event) {
       filter[8] = false;
     }
 
-    setTimeout(victimsNumber, 10);
+    setTimeout(victimsNumber, 50);
     drawMap();
 });
 
@@ -230,7 +230,7 @@ checkbox10.change(function(event) {
       filter[9] = false;
     }
     
-    setTimeout(victimsNumber, 10);
+    setTimeout(victimsNumber, 50);
     drawMap();
 });
 
@@ -245,8 +245,9 @@ $(function() {
         rangeStart = $("#slider-range").slider("values", 0);
         rangeEnd = $("#slider-range").slider("values", 1);
         
-        setTimeout(victimsNumber, 10);
+        
         drawMap();
+        setTimeout(victimsNumber, 50);
       },
       range: true,
       min: new Date(2016, 11, 01).getTime(),
@@ -299,8 +300,5 @@ function victimsNumber(callack) {
   } else {
     console.error(demo.error);
   }
-  console.log("Outside counter: " + counter);
-  // counter = 0; //Reset counter
-  console.log("Counter reset to 0.")
 }
 
