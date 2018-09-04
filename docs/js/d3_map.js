@@ -47,7 +47,7 @@ function drawMap(){
 
         onEachFeature: function(feature, layer) {
             counter += 1;
-            console.log("Trigger Counter inside loop: "+ counter);
+            // console.log("Trigger Counter inside loop: "+ counter);
             var fecha = parseTime(feature.properties.FECHA);
 
             popupLayout = "<div class='popup-banner grid-container'>" +
@@ -276,7 +276,8 @@ $("#info-button").click( function(event) {
 
 function victimsNumber() {
   drawMap();
-  setTimeout( function() { console.log("Trigger victimsNumber()")
+  setTimeout( function() { 
+    // console.log("Trigger victimsNumber()")
     var options = {
         useEasing: true,
         useGrouping: true,
