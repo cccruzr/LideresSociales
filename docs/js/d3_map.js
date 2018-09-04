@@ -125,8 +125,7 @@ checkbox1.change(function(event) {
     } else {
     filter[0] = false;
     }
-    setTimeout(victimsNumber, 50);
-    drawMap();
+    victimsNumber();
 });
 
 checkbox2.change(function(event) {
@@ -136,8 +135,7 @@ checkbox2.change(function(event) {
     } else {
       filter[1] = false;
     }
-    setTimeout(victimsNumber, 50);
-    drawMap();
+    victimsNumber();
 });
 
 checkbox3.change(function(event) {
@@ -147,8 +145,7 @@ checkbox3.change(function(event) {
     } else {
       filter[2] = false;
     }
-    setTimeout(victimsNumber, 50);
-    drawMap();
+    victimsNumber();
 });
 
 checkbox4.change(function(event) {
@@ -158,8 +155,7 @@ checkbox4.change(function(event) {
     } else {
       filter[3] = false;
     }
-    setTimeout(victimsNumber, 50);
-    drawMap();
+    victimsNumber();
 });
 
 checkbox5.change(function(event) {
@@ -170,8 +166,7 @@ checkbox5.change(function(event) {
       filter[4] = false;
     }
     
-    setTimeout(victimsNumber, 50);
-    drawMap();
+    victimsNumber();
 });
 
 checkbox6.change(function(event) {
@@ -182,8 +177,7 @@ checkbox6.change(function(event) {
       filter[5] = false;
     }
     
-    setTimeout(victimsNumber, 50);
-    drawMap();
+    victimsNumber();
 });
 
 checkbox7.change(function(event) {
@@ -194,8 +188,7 @@ checkbox7.change(function(event) {
       filter[6] = false;
     }
     
-    setTimeout(victimsNumber, 50);
-    drawMap();
+    victimsNumber();
 });
 
 checkbox8.change(function(event) {
@@ -206,8 +199,7 @@ checkbox8.change(function(event) {
       filter[7] = false;
     }
     
-    setTimeout(victimsNumber, 50);
-    drawMap();
+    victimsNumber();
 });
 
 checkbox9.change(function(event) {
@@ -218,8 +210,7 @@ checkbox9.change(function(event) {
       filter[8] = false;
     }
 
-    setTimeout(victimsNumber, 50);
-    drawMap();
+    victimsNumber();
 });
 
 checkbox10.change(function(event) {
@@ -230,8 +221,7 @@ checkbox10.change(function(event) {
       filter[9] = false;
     }
     
-    setTimeout(victimsNumber, 50);
-    drawMap();
+    victimsNumber();
 });
 
 // Global time range variables
@@ -245,9 +235,7 @@ $(function() {
         rangeStart = $("#slider-range").slider("values", 0);
         rangeEnd = $("#slider-range").slider("values", 1);
         
-        
-        drawMap();
-        setTimeout(victimsNumber, 50);
+        victimsNumber();
       },
       range: true,
       min: new Date(2016, 11, 01).getTime(),
@@ -286,19 +274,21 @@ $("#info-button").click( function(event) {
   }
 });
 
-function victimsNumber(callack) {
-  console.log("Trigger victimsNumber()")
-  var options = {
-      useEasing: true,
-      useGrouping: true,
-    //   separator: '',
-    //   decimal: '.',
-  };
-  var demo = new CountUp('victim-number', 0, counter, 0, 1, options);
-  if (!demo.error) {
-    demo.start();
-  } else {
-    console.error(demo.error);
-  }
+function victimsNumber() {
+  drawMap();
+  setTimeout( function() { console.log("Trigger victimsNumber()")
+    var options = {
+        useEasing: true,
+        useGrouping: true,
+      //   separator: '',
+      //   decimal: '.',
+    };
+    var demo = new CountUp('victim-number', 0, counter, 0, 1, options);
+    if (!demo.error) {
+      demo.start();
+    } else {
+      console.error(demo.error);
+    }
+  }, 100);
 }
 
