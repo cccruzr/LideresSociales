@@ -11,11 +11,12 @@ var parseTime = d3.timeParse("%Y-%m-%d");
 var overlay = null;
 drawMap();
 
-// Victim counter
+// Victim counter - Global
 var counter = 0;
 
 // //Adding a custom layer from file
 function drawMap(){
+    counter = 0;
     if (overlay != null) { overlay.clearLayers() };
     var lideresLayer = L.geoJson(null, {
     
@@ -41,13 +42,12 @@ function drawMap(){
                         weight: 1.25,
                     });
                 };
-                
             }
         },
 
         onEachFeature: function(feature, layer) {
             counter += 1;
-            // console.log(counter);
+            console.log("Trigger Counter inside loop: "+ counter);
             var fecha = parseTime(feature.properties.FECHA);
 
             popupLayout = "<div class='popup-banner grid-container'>" +
@@ -125,6 +125,7 @@ checkbox1.change(function(event) {
     } else {
     filter[0] = false;
     }
+    setTimeout(victimsNumber, 10);
     drawMap();
 });
 
@@ -135,6 +136,7 @@ checkbox2.change(function(event) {
     } else {
       filter[1] = false;
     }
+    setTimeout(victimsNumber, 10);
     drawMap();
 });
 
@@ -145,6 +147,7 @@ checkbox3.change(function(event) {
     } else {
       filter[2] = false;
     }
+    setTimeout(victimsNumber, 10);
     drawMap();
 });
 
@@ -155,6 +158,7 @@ checkbox4.change(function(event) {
     } else {
       filter[3] = false;
     }
+    setTimeout(victimsNumber, 10);
     drawMap();
 });
 
@@ -165,6 +169,8 @@ checkbox5.change(function(event) {
     } else {
       filter[4] = false;
     }
+    
+    setTimeout(victimsNumber, 10);
     drawMap();
 });
 
@@ -175,6 +181,8 @@ checkbox6.change(function(event) {
     } else {
       filter[5] = false;
     }
+    
+    setTimeout(victimsNumber, 10);
     drawMap();
 });
 
@@ -185,6 +193,8 @@ checkbox7.change(function(event) {
     } else {
       filter[6] = false;
     }
+    
+    setTimeout(victimsNumber, 10);
     drawMap();
 });
 
@@ -195,6 +205,8 @@ checkbox8.change(function(event) {
     } else {
       filter[7] = false;
     }
+    
+    setTimeout(victimsNumber, 10);
     drawMap();
 });
 
@@ -205,6 +217,8 @@ checkbox9.change(function(event) {
     } else {
       filter[8] = false;
     }
+
+    setTimeout(victimsNumber, 10);
     drawMap();
 });
 
@@ -215,6 +229,8 @@ checkbox10.change(function(event) {
     } else {
       filter[9] = false;
     }
+    
+    setTimeout(victimsNumber, 10);
     drawMap();
 });
 
@@ -228,6 +244,8 @@ $(function() {
       change: function() {
         rangeStart = $("#slider-range").slider("values", 0);
         rangeEnd = $("#slider-range").slider("values", 1);
+        
+        setTimeout(victimsNumber, 10);
         drawMap();
       },
       range: true,
@@ -251,10 +269,7 @@ $(function() {
     $("#slider-text-end").text(initEndDate);
   });
 
-// Counter on legend countUp.js
-var totalCount = counter;
-counter = 0;
-
+// Main counter (fixed)
 $("#info-button").click( function(event) {
   var options = {
       useEasing: true,
@@ -262,10 +277,30 @@ $("#info-button").click( function(event) {
     //   separator: '',
     //   decimal: '.',
   };
-  var demo = new CountUp('animated-counter', 0, counter, 0, 2.25, options);
+  var demo = new CountUp('animated-counter', 0, 128, 0, 2.25, options);
   if (!demo.error) {
     demo.start();
   } else {
     console.error(demo.error);
   }
 });
+
+function victimsNumber(callack) {
+  console.log("Trigger victimsNumber()")
+  var options = {
+      useEasing: true,
+      useGrouping: true,
+    //   separator: '',
+    //   decimal: '.',
+  };
+  var demo = new CountUp('victim-number', 0, counter, 0, 1, options);
+  if (!demo.error) {
+    demo.start();
+  } else {
+    console.error(demo.error);
+  }
+  console.log("Outside counter: " + counter);
+  // counter = 0; //Reset counter
+  console.log("Counter reset to 0.")
+}
+
