@@ -11,6 +11,9 @@ var parseTime = d3.timeParse("%Y-%m-%d");
 var overlay = null;
 drawMap();
 
+// Victim counter
+var counter = 0;
+
 // //Adding a custom layer from file
 function drawMap(){
     if (overlay != null) { overlay.clearLayers() };
@@ -43,6 +46,8 @@ function drawMap(){
         },
 
         onEachFeature: function(feature, layer) {
+            counter += 1;
+            // console.log(counter);
             var fecha = parseTime(feature.properties.FECHA);
 
             popupLayout = "<div class='popup-banner grid-container'>" +
@@ -240,8 +245,27 @@ $(function() {
     });
     
     var initStartDate = new Date($("#slider-range").slider("values", 0)).getDate() + "-" +  months[(new Date($("#slider-range").slider("values", 0)).getMonth())] + "-" + new Date($("#slider-range").slider("values", 0)).getFullYear();
-    var initEndDate = new Date($("#slider-range").slider("values", 1)).getDate() + "-" +  months[(new Date($("#slider-range").slider("values", 1)).getMonth() + 1)] + "-" + new Date($("#slider-range").slider("values", 1)).getFullYear();
+    var initEndDate = new Date($("#slider-range").slider("values", 1)).getDate() + "-" +  months[(new Date($("#slider-range").slider("values", 1)).getMonth())] + "-" + new Date($("#slider-range").slider("values", 1)).getFullYear();
 
     $("#slider-text-start").text(initStartDate);
     $("#slider-text-end").text(initEndDate);
   });
+
+// Counter on legend countUp.js
+var totalCount = counter;
+counter = 0;
+
+$("#info-button").click( function(event) {
+  var options = {
+      useEasing: true,
+      useGrouping: true,
+    //   separator: '',
+    //   decimal: '.',
+  };
+  var demo = new CountUp('animated-counter', 0, counter, 0, 2.25, options);
+  if (!demo.error) {
+    demo.start();
+  } else {
+    console.error(demo.error);
+  }
+});

@@ -37,7 +37,7 @@
         <!-- Nav tabs -->
         <div class="sidebar-tabs">
             <ul role="tablist">
-                <li><a href="#info" role="tab"><i class="fas fa-info-circle"></i></a></li>
+                <li><a id="info-button" href="#info" role="tab"><i class="fas fa-info-circle"></i></a></li>
                 <li><a href="#settings" role="tab"><i class="fas fa-sliders-h"></i></a></li>
                 <li><a id="defaultViewButton"><i class="fas fa-globe"></i></a></li>
                 <!-- <li class="disabled"><a href="#messages" role="tab"><i class="fa fa-envelope"></i></a></li> -->
@@ -64,12 +64,16 @@
                         <img class="legend-logo" src="css/img/logo_pacifista.png" alt="Logo Pacifista">    
                     </div>
 
+                    <div class="grid-100 mobile-grid-100">
+                        <p><span id="animated-counter" class="animated-counter-text-red"></span><span class="animated-counter-text-black">&ensp;Líderes Asesinados</span></p>     
+                    </div>
+
                     <div class="grid-100 mobile-grid-100 text-legend-medium">
                         <p>El primero de diciembre de 2016, conocido dentro del cronograma de dejación de armas como el <strong>Día D</strong>, comenzó la implementación de los acuerdos de paz.  El gobierno y las FARC echaron a andar una hoja de ruta para que esa guerrilla, la más antigua del continente, se convierta por fin en un partido político legal, que hable con votos y no con balas.</p>
         
                         <p>Desde entonces, a los obstáculos por las demoras en la entrega de las zonas veredales, los debates políticos de reglamentación de los acuerdos y la eterna pelea entre el gobierno y la oposición, se ha sumado un problema: el asesinato de líderes sociales. A julio de 2018, han asesinado a más de <strong>100 dirigentes y líderes</strong> que van desde presidentes de juntas de acción comunal, miembros de la Guardia Campesina, líderes indígenas, estudiantes, entre otros.</p>
         
-                        <p>A partir del día D, <strong>¡Pacifista!</strong> decidió hacer un <a href="http://pacifista.co/lideres-sociales-asesinados-inicio-implementacion/">contador</a> para registrar esos asesinatos. Este mapa web interactivo se desarrolló como una visualización complementaria al artículo, que se convertirá en una especie de bitácora de la tragedia que significa perder a los hombres y mujeres que van a implementar la paz en las regiones.</p> 
+                        <p>A partir del día D, <strong>¡Pacifista!</strong> decidió hacer un <a href="http://pacifista.co/lideres-sociales-asesinados-inicio-implementacion/" target="_blank">contador</a> para registrar esos asesinatos. Este mapa web interactivo se desarrolló como una visualización complementaria al artículo, que se convertirá en una especie de bitácora de la tragedia que significa perder a los hombres y mujeres que van a implementar la paz en las regiones.</p> 
         
                         <p> Mientras el gobierno dice que las muertes no son sistemáticas, y los paramilitares en Colombia no existen, este contador seguirá presente.</p>
                             
@@ -341,6 +345,7 @@
     <script src="https://d3js.org/d3.v4.min.js"></script>
     <script src='https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-omnivore/v0.3.1/leaflet-omnivore.min.js'></script>    
     <script src="js/SliderControl.js"></script>
+    <script src="js/countUp.js"></script>
     
     <script src="js/map.js"></script>
     <script src="js/d3_map.js"></script>
