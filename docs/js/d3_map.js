@@ -290,6 +290,6 @@ function victimsNumber() {
     } else {
       console.error(demo.error);
     }
-  }, 100);
+  }, 250);
 }
 
