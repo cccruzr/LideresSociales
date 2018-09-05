@@ -12,7 +12,9 @@ var overlay = null;
 drawMap();
 
 // Victim counter - Global
-var counter = 0;
+var counter = 0
+    totalVictimas = 130;
+$("#victim-number").text(totalVictimas);
 
 // //Adding a custom layer from file
 function drawMap(){
@@ -266,7 +268,7 @@ $("#info-button").click( function(event) {
     //   separator: '',
     //   decimal: '.',
   };
-  var demo = new CountUp('animated-counter', 0, 128, 0, 2.25, options);
+  var demo = new CountUp('animated-counter', 0, totalVictimas, 0, 2.25, options);
   if (!demo.error) {
     demo.start();
   } else {
