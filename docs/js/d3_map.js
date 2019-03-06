@@ -1,6 +1,17 @@
 // Global dataset
 var dataset;
 
+// Victim counter - Global
+var numVictm = 0;
+var counter = 0;
+var totalVictimas = 0;
+
+d3.csv('data/data_lideres.csv', function(data) {
+  console.log(data.length-2);
+  totalVictimas = data.length - 2;
+});
+$("#victim-number").text(totalVictimas);
+
 // Categories
 var categories  = ["Política", "Campesinos", "Indígenas", "Afro", "Paz", "Ambiente", "Tierras", "Víctimas", "Educación", "LGBTI"],
     colors = ["#1f77b4", "#ff7f0e", "#2ca02c", "#d62728", "#9467bd", "#8c564b", "#e377c2", "#7f7f7f", "#bcbd22", "#17becf"],
@@ -11,10 +22,8 @@ var parseTime = d3.timeParse("%Y-%m-%d");
 var overlay = null;
 drawMap();
 
-// Victim counter - Global
-var counter = 0
-    totalVictimas = 130;
-$("#victim-number").text(totalVictimas);
+
+
 
 // //Adding a custom layer from file
 function drawMap(){
