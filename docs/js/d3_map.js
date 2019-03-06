@@ -6,7 +6,7 @@ var numVictm = 0;
 var counter = 0;
 var totalVictimas = 0;
 
-googleCSV = "http://docs.google.com/spreadsheets/d/e/2PACX-1vQpl5yBXRPAycrthFsdDUUUXeU3I1LRwkFB4DkBM54POumCi1qO5MON7RlkQnsE2MXC8PM2mdWalbo8/pub?gid=850033101&single=true&output=csv";
+googleCSV = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQpl5yBXRPAycrthFsdDUUUXeU3I1LRwkFB4DkBM54POumCi1qO5MON7RlkQnsE2MXC8PM2mdWalbo8/pub?gid=850033101&single=true&output=csv";
 
 d3.csv(googleCSV, function(data) {
   totalVictimas = data.length;
