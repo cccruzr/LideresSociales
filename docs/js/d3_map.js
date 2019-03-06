@@ -6,11 +6,14 @@ var numVictm = 0;
 var counter = 0;
 var totalVictimas = 0;
 
-d3.csv('data/data_lideres.csv', function(data) {
-  console.log(data.length-2);
-  totalVictimas = data.length - 2;
+googleCSV = "http://docs.google.com/spreadsheets/d/e/2PACX-1vQpl5yBXRPAycrthFsdDUUUXeU3I1LRwkFB4DkBM54POumCi1qO5MON7RlkQnsE2MXC8PM2mdWalbo8/pub?gid=850033101&single=true&output=csv";
+
+d3.csv(googleCSV, function(data) {
+  totalVictimas = data.length;
+  console.log(totalVictimas);
+  $("#victim-number").text(totalVictimas);
 });
-$("#victim-number").text(totalVictimas);
+
 
 // Categories
 var categories  = ["Política", "Campesinos", "Indígenas", "Afro", "Paz", "Ambiente", "Tierras", "Víctimas", "Educación", "LGBTI"],
@@ -21,9 +24,6 @@ var categories  = ["Política", "Campesinos", "Indígenas", "Afro", "Paz", "Ambi
 var parseTime = d3.timeParse("%Y-%m-%d");
 var overlay = null;
 drawMap();
-
-
-
 
 // //Adding a custom layer from file
 function drawMap(){
@@ -109,7 +109,7 @@ function drawMap(){
         },
     });
     
-    var myLayer = omnivore.csv('data/data_lideres.csv', null, lideresLayer);
+    var myLayer = omnivore.csv(googleCSV, null, lideresLayer);
     overlay = L.layerGroup([lideresLayer]).addTo(map);
 }
 
