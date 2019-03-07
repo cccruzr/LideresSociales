@@ -1,4 +1,4 @@
-mapAttribution = 'Desarrollado por <a href="http://cccruzr.github.io" target="blank">Camilo Cruz</a> con los datos de &copy;<a href="http://pacifista.co/lideres-sociales-asesinados-inicio-implementacion/" target="blank">Pacifista</a>';
+mapAttribution = 'Desarrollo: <a href="http://cccruzr.github.io" target="blank">Camilo Cruz</a> | Datos: <a href="http://pacifista.co/lideres-sociales-asesinados-inicio-implementacion/" target="blank">Pacifista!</a>';
 
 //OSM tiles attribution and URL
 var osmLink = '<a href="http://openstreetmap.org">OSM</a>',
