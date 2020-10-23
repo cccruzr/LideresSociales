@@ -9,7 +9,7 @@ var totalVictimas = 0;
 // googleCSV = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQpl5yBXRPAycrthFsdDUUUXeU3I1LRwkFB4DkBM54POumCi1qO5MON7RlkQnsE2MXC8PM2mdWalbo8/pub?gid=850033101&single=true&output=csv";
 // googleCSV = "https://docs.google.com/spreadsheets/d/e/2PACX-1vTxZicPgYY7_7D08RjeXK4uO4CcvubyXehqSJToxP474Lon5eNVqoGJRF6BYYBe1672qkKx-aCed3rZ/pub?gid=850033101&single=true&output=csv"
 // Updated CSV / 23.10.2020
-googleCSV = "https://docs.google.com/spreadsheets/d/e/2PACX-1vTxZicPgYY7_7D08RjeXK4uO4CcvubyXehqSJToxP474Lon5eNVqoGJRF6BYYBe1672qkKx-aCed3rZ/pub?gid=850033101&single=true&output=csv&sheet=data_lideres"
+googleCSV = "https://docs.google.com/spreadsheets/d/1yLnILymoD014OGocXOjpIr6_KzIgvGafTGjgrwA-7Yo/export?format=csv&gid=850033101"
 
 
 d3.csv(googleCSV, function(data) {
